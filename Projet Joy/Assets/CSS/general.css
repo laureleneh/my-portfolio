@@ -1,0 +1,121 @@
+:root {
+    /* Couleurs de la charte graphique */
+    --noirjoy: #0b140b;
+    --blancjoy: #f6fff6;
+    --orangejoy: #CB4F24;
+    --vertjoy: #386539;
+    --vert20: #AFC1B0;
+    --orange20: #EAB9A7;
+    /* Font-size respectant le nombre d'or et responsive */
+    --h1: 5.08vw;
+    --h2: 3.14vw;
+    --h3: 1.94vw;
+    --p: 1.2vw;
+
+    /* Margin et Padding */
+    --petit-padding: 0.35vw;
+    --grand-padding: 1vw;
+    --grand-border-radius: 2vw;
+    --petit-border-radius: 1vw;
+}
+
+html{
+    scroll-behavior: smooth
+}
+
+* {
+    background: var(--noirjoy);
+    font-family: Sirenia, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    color: var(--blancjoy);
+}
+
+h1 {
+    font-size: var(--h1);
+    text-align: center;
+    padding-bottom: var(--grand-padding);
+}
+
+h2 {
+    font-size: var(--h2);
+    text-align: center;
+    padding-bottom: var(--grand-padding);
+}
+
+h3 {
+    font-size: var(--h3);
+    padding: var(--grand-padding) 0 var(--petit-padding);
+}
+
+p, td{
+    font-size: var(--p);
+    padding-bottom: var(--grand-padding);
+}
+li{
+    font-size: var(--p);
+}
+
+a{
+    color: var(--blancjoy);
+    font-size: var(--p);
+    cursor: pointer;
+}
+
+main{
+    margin: 0 3%;
+}
+
+main{
+    margin-top: 4.9vw;
+}
+
+/* Format Mobile */ 
+
+@media screen and (max-width: 600px) { 
+    :root { 
+        /* Margin et Padding */
+        --petit-padding: 8px;
+        --grand-padding: 16px;
+        --grand-border-radius: 16px;
+        --petit-border-radius: 8px;
+    }
+
+    h1 {
+        font-size:  30px;
+        padding-bottom: 16px;
+    }
+    h2 {
+        font-size:  26px;
+        padding-bottom: 16px;
+    }
+    
+    h3 {
+        font-size:  22px;
+        padding: 16px 0 16px;
+    }
+    
+    p, td {
+        font-size:  18px;
+        padding-bottom: 16px;
+    }
+    
+    li{
+        font-size: 18px;
+    }
+    
+    a{
+        font-size: 18px;
+    }
+
+    main {
+        margin-top: 24px;
+        margin-bottom: 56px;
+    }}

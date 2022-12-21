@@ -1,0 +1,326 @@
+:root {
+    /* Couleurs de la charte graphique */
+    --noirjoy: #0b140b;
+    --blancjoy: #f6fff6;
+    --orangejoy: #CB4F24;
+    --vertjoy: #386539;
+    --vert20: #AFC1B0;
+    --orange20: #EAB9A7;
+    /* Font-size respectant le nombre d'or et responsive */
+    --h1: 5.08vw;
+    --h2: 3.14vw;
+    --h3: 1.94vw;
+    --p: 1.2vw;
+
+   /* Margin et Padding */
+   --petit-padding: 0.35vw;
+   --grand-padding: 2vw;
+   --grand-border-radius: 2vw;
+   --petit-border-radius: 1vw;
+}
+
+/* tailles logo, menu et reseaux sociaux */
+.logo {
+    width: auto;
+    height: 4.5vw;
+}
+.nav-bar{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 99;
+}
+
+.nav-bar a, .nav-bar div{
+    font-size: 1.5vw;
+}
+
+footer a, footer p {
+    font-size: 1vw;
+}
+
+footer p{
+    padding: 0;
+}
+
+.reseaux-sociaux img {
+    width: 2.5vw;
+    height: auto;
+}
+
+/* tailles logo et reseaux sociaux au hover */
+.logo:hover,
+.reseaux-sociaux img:hover {
+    transform: scale(1.1)
+}
+
+/* orientation */
+.nav-bar, .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropbtn {
+    display: flex;
+    gap: var(--petit-padding);
+    align-items: center;
+}
+
+.reseaux-sociaux ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+/* Espacement entre les reseaux sociaux */
+.reseaux-sociaux ul li {
+    padding: var(--petit-padding);
+    list-style: none;
+}
+
+/* Chevron */
+
+.dropbtn {
+    color:var(--blancjoy)
+}
+
+.fa-solid{
+    font-size: 1.2vw;
+    /* color: var(--blancjoy); */
+}
+
+/* Menu au hover et au focus */
+.dropbtn:hover {
+    color: var(--orange20);
+}
+
+
+.show .dropbtn{
+    color: var(--orangejoy);
+    padding-left: var(--petit-padding);
+}
+
+.show .fa-solid {
+    transform: rotate(180deg);
+}
+
+/* Menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Menu déroulant caché par défaut */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 13.3vw;
+    z-index: 1;
+    padding: var(--petit-padding);
+}
+
+/* Contenu du menu deroulant */
+.dropdown-content a {
+    display: block;
+}
+
+/* Menu déroulant au hover */
+.dropdown-content a:hover {
+    color: var(--orange20);
+}
+
+/* Show Menu déroulant au clic */
+.show .dropdown-content {
+    display: block;
+}
+
+.tab_bar { 
+    display: none; 
+  } 
+
+@media screen and (max-width: 600px) { 
+    .nav-bar, .footer { 
+      display: none; 
+    } 
+}
+
+@media screen and (max-width: 600px) { 
+:root {
+    /* Font-size respectant le nombre d'or et responsive */
+    --h1: 24;
+    --h2: 22;
+    --h3: 20;
+    --p: 18;
+
+    /* Margin et Padding */
+    --petit-padding: 8px;
+    --grand-padding: 16px;
+    --grand-border-radius: 16px;
+    --petit-border-radius: 8px;
+}
+
+/* La tab bar*/
+.tab_bar * {
+    font-size: 20px;
+}
+
+.tab_bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--grand-padding) 0;
+}
+
+.tab_bar a img {
+    height: 24px;
+}
+
+.tab_bar a {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Croix du menu */
+label {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+}
+
+label span {
+    background: #fff;
+    border-radius: 10px;
+    height: 4px;
+    margin: 4px 0;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+span:nth-of-type(1) {
+    width: 50%;
+}
+
+span:nth-of-type(2) {
+    width: 100%;
+}
+
+span:nth-of-type(3) {
+    width: 75%;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(7px, 0px)
+}
+
+#check:checked~span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg)
+}
+
+#check:checked~span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(18px, -7px) rotatez(45deg);
+}
+
+/* overlay */
+.overlay {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    padding: var(--grand-padding);
+    bottom: 56px;
+    right: 0;
+    width: 50%;
+    padding: 48px 0;
+}
+
+/* ouverture de l'overlay  */
+.test input[type="checkbox"]:checked~.overlay {
+    display: flex;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+}
+
+/* Top du Menu */
+.top .logo {
+    height: 64px;
+}
+
+.reseaux-sociaux img {
+    width: auto;
+    height: 44px;
+}
+
+
+.reseaux-sociaux ul {
+    display: flex;
+    justify-content: center;
+}
+
+.reseaux-sociaux ul li {
+    padding: var(--petit-padding);
+    list-style: none;
+    padding: 4px;
+}
+
+/* Les items du menu */
+.accordion * {
+    font-size: 20px;
+}
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 48px;
+    text-align: left;
+    transition: 0.4s;
+}
+
+.fa-solid {
+    padding-bottom: 4px;
+}
+
+/* Les items au déroulé */
+.active {
+    color: var(--orangejoy);
+}
+
+.active .fa-solid {
+    transform: rotate(180deg);
+    padding-bottom: 0px;
+}
+
+/* Sous-Menu */
+.panel * {
+    font-size: 20px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+}

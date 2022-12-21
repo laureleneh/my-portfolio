@@ -1,0 +1,199 @@
+:root {
+    /* Couleurs de la charte graphique */
+    --noirjoy: #0b140b;
+    --blancjoy: #f6fff6;
+    --orangejoy: #CB4F24;
+    --vertjoy: #386539;
+    --vert20: #AFC1B0;
+    --orange20: #EAB9A7;
+    /* Font-size respectant le nombre d'or et responsive */
+    --h1: 5.08vw;
+    --h2: 3.14vw;
+    --h3: 1.94vw;
+    --p: 1.2vw;
+  
+   /* Margin et Padding */
+   --petit-padding: 0.35vw;
+   --grand-padding: 2vw;
+   --grand-border-radius: 2vw;
+   --petit-border-radius: 1vw;
+  }
+
+main{
+    margin: 0
+}
+h2{
+    padding: 0;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh
+}
+
+.titre {
+    writing-mode: tb-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
+
+td {
+    padding: 1vw var(--grand-padding)
+}
+
+/* Background */
+#welcome {
+    background-image: url("/Assets/Images/Carte/1Ardoise.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+h1 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+.choix {
+    text-align: center;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+.choix a {
+    display: inline-block;
+    padding: 0 var(--grand-padding) var(--petit-padding);
+    /* margin: 12px 24px; */
+    font-size: var(--h3);
+    background-color: transparent;
+}
+
+
+#chevron {
+    content: '';
+    display: inline-block;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 0.26vw;
+    border-width: 0.52vw 0.52vw 0 0;
+    height: 1.82vw;
+    left: 50%;
+    position: absolute;
+    transform: rotate(135deg);
+    bottom: 10%;
+    width: 1.82vw;
+    animation: chevron 500ms linear infinite alternate;
+}
+
+@keyframes chevron {
+    from {
+        bottom: 10%;
+    }
+
+    to {
+        bottom: 8%;
+    }
+}
+
+ /* Photos background */
+
+.img2 {
+    background-image: url("/Assets/Images/Carte/2Boissons.jpg");
+}
+
+.img3 {
+    background-image: url("/Assets/Images/Carte/3Entree.jpg");
+}
+
+.img4 {
+    background-image: url("/Assets/Images/Carte/4Plats.jpg");
+}
+
+.img5 {
+    background-image: url("/Assets/Images/Carte/5Desserts.jpg");
+}
+
+.img6 {
+    background-image: url("/Assets/Images/Carte/6boissonsfroides.jpg");
+}
+
+.img7 {
+    background-image: url("/Assets/Images/Carte/71boissonschaudes.jpg");
+}
+
+.bg-image {
+    width: 100vw;
+    height: 70vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Bouton retour */
+.retour{
+    display: none;
+    text-align:center;
+	color: var(--blancjoy);
+    background-color: transparent;
+	padding-top: 2.34vw;
+	display:inline-block;
+	position:fixed;
+    top: 84%;
+    right: 2%;
+	border-color:var(--blancjoy);
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+
+.retour:before{
+	content:'▲';
+	font-size: 1.05 vw;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.82vw;
+	border:solid .15vw var(--blancjoy);
+	border-radius:11.71vw;
+	width:1.64vw;
+	height:1.64vw;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+
+.retour:hover{
+	color:var(--orangejoy);
+	border-color:var(--orangejoy);
+}
+
+.retour:hover:before{
+	transform: rotate(360deg);
+}
+
+
+@media screen and (max-width: 600px) { 
+    :root {
+        /* Font-size respectant le nombre d'or et responsive */
+        --h1: 24;
+        --h2: 22;
+        --h3: 20;
+        --p: 18;
+    
+        /* Margin et Padding */
+        --petit-padding: 8px;
+        --grand-padding: 16px;
+        --grand-border-radius: 16px;
+        --petit-border-radius: 8px;
+    }}

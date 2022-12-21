@@ -1,0 +1,222 @@
+:root {
+  /* Couleurs de la charte graphique */
+  --noirjoy: #0b140b;
+  --blancjoy: #f6fff6;
+  --orangejoy: #CB4F24;
+  --vertjoy: #386539;
+  --vert20: #AFC1B0;
+  --orange20: #EAB9A7;
+
+  /* Font-size respectant le nombre d'or et responsive */
+  --h1: 5.08vw;
+  --h2: 3.14vw;
+  --h3: 1.94vw;
+  --p: 1.2vw;
+
+ /* Margin et Padding */
+ --petit-padding: 0.35vw;
+ --grand-padding: 2vw;
+ --grand-border-radius: 2vw;
+ --petit-border-radius: 1vw;
+}
+
+/* Modal */
+.modal *{
+  background-color: transparent;
+  text-align: center;
+  color: var(--noirjoy)
+}
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-45%);
+  left: 25%;
+  width: 50%;
+  overflow:hidden;
+  border-radius: var(--petit-border-radius);
+}
+
+/* Modal Body */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--blancjoy);
+}
+
+.modal_photo img {
+  height: 45vh;
+  width: auto;
+  padding: auto;
+  margin: var(--grand-padding);
+  border-radius: var(--grand-border-radius);
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+      /* top: -300px; */
+      opacity: 0
+  }
+
+  to {
+      /* top: 40%;
+      transform: translateY(-50%); */
+      opacity: 1
+  }
+}
+
+/* The Close Button */
+.close1{
+  color: var(--noirjoy);
+  font-size: var(--h3);
+  position: absolute;
+  top:1%;
+  right:1%;
+}
+
+.close1:hover, .close1:focus {
+  color: var(--orangejoy);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Header */
+.bienvenue *{
+  background: transparent;
+}
+
+.bienvenue{
+  position: absolute;
+  top: 45%;
+  right:50%;
+  transform: translateX(50%);
+  text-align: center;
+  background:#0b140bd7;
+  color: var(--blancjoy);
+  width: 50%;
+  padding: var(--grand-padding);
+  border-radius: var(--grand-border-radius); 
+}
+
+.bienvenue a:hover{
+  color: var(--orange20);
+}
+
+/* Main */
+main{
+  margin-top: 0;
+}
+
+/* Cartes*/
+
+section{
+  margin: var(--grand-padding) 0;
+}
+
+.cartes{
+  display: flex;
+  gap: var(--grand-padding);
+  width: 100%;
+  height: 50vw;
+  padding: var(--grand-padding) 0;
+}
+
+.text *{
+  background-color: transparent;
+  color: var(--noirjoy);
+}
+
+.text{
+  flex: 50%;
+  color: var(--noirjoy);
+  background-color: var(--blancjoy);
+  padding: var(--grand-padding);
+  border-radius: var(--grand-border-radius);
+}
+
+
+iframe{
+  flex: 50%;
+  max-width: 50%;
+  border-radius: var(--grand-border-radius);
+}
+
+/* Images Grille */
+
+.grid{
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr); 
+  gap: var(--grand-padding);
+  flex:50%;
+}
+
+#cuisinier, #soupe, #legumes{
+  border-radius: var(--grand-border-radius);
+
+}
+
+#cuisinier{
+  background: no-repeat url("/Assets/Images/Home/cuisinier.jpg") center/ cover;
+  grid-area: 1/1/3/2;
+}
+
+#soupe{
+  background: no-repeat url("/Assets/Images/Home/Soupe.jpg") center/ cover;
+  grid-area: 1/2/2/3;
+}
+
+#legumes{
+  background: no-repeat url("/Assets/Images/Home/legumes.jpg") center/ cover;
+  grid-area: 2/2/3/3;
+}
+
+/* Venir */
+
+
+.adresse * {
+  background: var(--blancjoy);
+  color: var(--noirjoy);
+}
+
+ul #jours, ul #tel, ul #mail{
+  padding: var(--grand-padding) 0 0 0;
+}
+
+ul{
+  font-size:var(--p);
+  padding: 0 var(--grand-padding);
+}
+
+.details{
+  padding: 0 var(--grand-padding);
+}
+
+li{
+  list-style: inside;
+}
+
+.none{
+  list-style: none;
+  padding: 0 var(--grand-padding);
+}
+
+@media screen and (max-width: 600px) { 
+    :root {
+        /* Font-size respectant le nombre d'or et responsive */
+        --h1: 24;
+        --h2: 22;
+        --h3: 20;
+        --p: 18;
+    
+        /* Margin et Padding */
+        --petit-padding: 8px;
+        --grand-padding: 16px;
+        --grand-border-radius: 16px;
+        --petit-border-radius: 8px;
+    }}
+
+
+

@@ -1,0 +1,181 @@
+:root {
+    /* Couleurs de la charte graphique */
+    --noirjoy: #0b140b;
+    --blancjoy: #f6fff6;
+    --orangejoy: #CB4F24;
+    --vertjoy: #386539;
+    --vert20: #AFC1B0;
+    --orange20: #EAB9A7;
+    /* Font-size respectant le nombre d'or et responsive */
+    --h1: 5.08vw;
+    --h2: 3.14vw;
+    --h3: 1.94vw;
+    --p: 1.2vw;
+
+     /* Margin et Padding */
+     --petit-padding: 0.35vw;
+     --grand-padding: 1vw;
+     --grand-border-radius: 2vw;
+     --petit-border-radius: 1vw;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    gap: var(--p);
+    padding: var(--grand-padding) 0;
+}
+
+/* Calendrier */
+.calendrier *{
+    background-color: var(--blancjoy) ;
+    color: var(--noirjoy);
+}
+
+.calendrier {
+    flex: 50%;
+    border-radius: var(--grand-border-radius);
+    background: var(--blancjoy);
+    padding: var(--grand-padding);
+    min-height: 40vw;
+}
+
+h2+h3{
+    padding-top: 0;
+}
+
+.calendrier li{
+    padding-bottom: var(--petit-padding);
+}
+
+/* Carroussel */
+.carroussel {
+    flex: 50%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    max-width: 100%;
+    height: 44vw;
+    padding: var(--grand-padding) 0;
+}
+
+#haut {
+    grid-area: 1 / 3 / 3 / 7;
+}
+
+#gauche {
+    grid-area: 2 / 1 / 4 / 4;
+}
+
+#bas {
+    grid-area: 3 / 3 / 5 / 7;
+}
+
+#droite {
+    grid-area: 2 / 5 / 4 / 9;
+}
+
+.carroussel .container{
+    position:relative;
+    height: 20vw;
+    width: 15vw;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.carroussel .diaporama{
+    position: absolute;
+    display: flex;
+    width: 400%;
+    height: 20vw;
+    background-color: transparent;
+    animation: slider 20s infinite alternate;
+}
+ 
+.evenement {
+    height: 20vw;
+    width: 15vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--grand-border-radius);
+}
+
+.eve1 {
+    background-image: url('/Assets/Images/Amuser/Galette.jpg');
+}
+
+.eve2 {
+    background-image: url('/Assets/Images/Amuser/Chandleur.jpg');
+}
+
+.eve3 {
+    background-image: url('/Assets/Images/Amuser/Noel.jpg');
+}
+
+.eve4 {
+    background-image: url('/Assets/Images/Amuser/nouvelan.jpg');
+}
+
+/* animation carroussel */
+      @keyframes slider{
+        0%, 20.13% {
+            transform: translate(0,0);
+          }
+          31.25%, 45.13% {
+            transform: translate(-25%,0);
+          }
+          56.25%, 76.38% {
+            transform: translate(-50%,0);
+          }
+          87.5%, 100% {
+            transform: translate(-75%,0);
+          }
+}
+
+@media screen and (max-width: 600px) { 
+    :root {
+        /* Font-size respectant le nombre d'or et responsive */
+        --h1: 24;
+        --h2: 22;
+        --h3: 20;
+        --p: 18;
+    
+        /* Margin et Padding */
+        --petit-padding: 8px;
+        --grand-padding: 16px;
+        --grand-border-radius: 16px;
+        --petit-border-radius: 8px;
+    }
+
+main{
+    flex-direction: column;
+}
+
+#droite, #gauche, #bas {
+    display: none;
+}
+
+#haut{
+    grid-area: 1/1/5/8 ;
+    width: 94vw;
+}
+
+.carroussel{
+    width: 100vw;
+    height: 70vh;
+}
+
+.carroussel .diaporama{
+    justify-content: space-around;
+    width: 100%;
+    gap: 4px;
+    animation: slider 0s infinite alternate;
+}
+
+main{
+    padding-top: 0 ;
+}
+}
