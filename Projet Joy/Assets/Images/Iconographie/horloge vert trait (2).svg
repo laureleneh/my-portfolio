@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.2 71.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #386539;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Icones">
+    <g id="horloge_vert_trait" data-name="horloge vert trait">
+      <circle class="cls-1" cx="35.6" cy="35.6" r="34.6"/>
+      <circle class="cls-1" cx="35.6" cy="35.6" r="23.62"/>
+      <ellipse class="cls-1" cx="35.6" cy="35.6" rx=".74" ry=".77"/>
+      <line class="cls-1" x1="35.6" y1="35.6" x2="27.81" y2="22.1"/>
+      <line class="cls-1" x1="49.51" y1="28.57" x2="35.6" y2="35.6"/>
+      <line class="cls-1" x1="12.37" y1="35.6" x2="16.57" y2="35.6"/>
+      <line class="cls-1" x1="35.6" y1="54.63" x2="35.6" y2="58.83"/>
+      <line class="cls-1" x1="35.6" y1="12.37" x2="35.6" y2="16.57"/>
+      <line class="cls-1" x1="54.68" y1="35.6" x2="58.88" y2="35.6"/>
+    </g>
+  </g>
+</svg>

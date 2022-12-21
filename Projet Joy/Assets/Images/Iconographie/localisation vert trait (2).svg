@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.37 71.37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #386539;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Icones">
+    <g id="localisation_vert_trait" data-name="localisation vert trait">
+      <circle class="cls-1" cx="35.69" cy="35.69" r="34.69" transform="translate(-13.43 24.09) rotate(-31.72)"/>
+      <g>
+        <path class="cls-1" d="M35.56,54.53c-5.19-6.86-8.38-12.96-10.33-17.27-2.06-4.54-2.44-6.45-2.21-8.5,.62-5.36,5.52-11.81,12.46-11.93,6-.1,10.67,4.57,12.26,8.94,2,5.51-.77,10.83-4.24,17.5-2.64,5.07-5.67,8.81-7.94,11.25Z"/>
+        <circle class="cls-1" cx="35.69" cy="29.96" r="5.18"/>
+      </g>
+    </g>
+  </g>
+</svg>
